@@ -39,14 +39,10 @@ public class ValidateCompanyDetailsTest extends BaseTest{
 		assertTrue(app.elementIsDisplayed(app.company.followLogInPopUp));
 		app.click(app.company.closePopup);
 		
-		WebElement categElement = driver.findElement(app.company.categoryText);
-		assertEquals(categElement.getText(), "B2B SaaS Web Development");
-		WebElement sizeElement = driver.findElement(app.company.sizeText);
-		assertEquals(sizeElement.getText(), "200-300");
-		WebElement foundedElement = driver.findElement(app.company.foundedIn);
-		assertEquals(foundedElement.getText(), "2017");
-		WebElement locationElement = driver.findElement(app.company.location);
-		assertEquals(locationElement.getText(), "San Francisco");
+		assertEquals(app.getElementText(app.company.categoryText), "B2B SaaS Web Development");
+		assertEquals(app.getElementText(app.company.sizeText), "200-300");
+		assertEquals(app.getElementText(app.company.foundedIn), "2017");
+		assertEquals(app.getElementText(app.company.location), "San Francisco");
 		
 	}
 

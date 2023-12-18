@@ -83,5 +83,9 @@ public class SeleniumWrappers extends BaseTest{
 	public boolean elementIsDisplayed(By locator) {
 		return driver.findElement(locator).isDisplayed();
 	}
+	
+	public String getElementText(By locator) {
+		return driver.findElement(locator).getText();
+	}
 
 }
